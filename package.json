@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/kartik1998/sol-key-gen/issues"
   },
-  "homepage": "https://github.com/kartik1998/sol-key-gen#readme"
+  "homepage": "https://github.com/kartik1998/sol-key-gen#readme",
+  "dependencies": {
+    "axios": "^0.22.0"
+  }
 }
