@@ -1,0 +1,23 @@
+{
+  "name": "sol-key-gen",
+  "version": "1.0.0",
+  "description": "service to generate solana public / private key pairs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartik1998/sol-key-gen.git"
+  },
+  "keywords": [
+    "Solana",
+    "key-pair"
+  ],
+  "author": "Kartik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kartik1998/sol-key-gen/issues"
+  },
+  "homepage": "https://github.com/kartik1998/sol-key-gen#readme"
+}
