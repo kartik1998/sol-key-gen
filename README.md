@@ -1,17 +1,18 @@
-# sol-key-gen
+# Solana Key Generator API
 
 service to generate solana public / private key pairs
 
 ### Usage
+* <i><b>staging url:</b></i> <i>https://sol-key-gen-staging.herokuapp.com</i>
 
-- Ping
-
-```
-curl -XGET http://localhost:3000/ping
-```
-
-- Generate Key Pair
+- <i><b>Ping</b></i>
 
 ```
-curl -XGET http://localhost:3000/generatePair
+curl -XGET BASE_URL/ping
+```
+
+- <i><b>Generate Key Pair</b></i>
+
+```
+curl -XGET BASE_URL/generatePair
 ```
