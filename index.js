@@ -35,6 +35,15 @@ app.get("/generatePair", (_, res) => {
   });
 });
 
+(function keepAlive() {
+  const { NODE_ENV } = process.env;
+  if (NODE_ENV === "production")
+    utils.herokuKeepAlive("https://sol-key-gen.herokuapp.com");
+  else if (NODE_ENV === "staging") {
+    utils.herokuKeepAlive("https://sol-key-gen-staging.herokuapp.com");
+  }
+})();
+
 app.listen(PORT, () => {
   console.log(`connection established on port ${PORT}`);
 });
