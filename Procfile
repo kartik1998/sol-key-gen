@@ -1,1 +1,0 @@
-web: sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
