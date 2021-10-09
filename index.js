@@ -17,6 +17,11 @@ app.get("/generatePair", (_, res) => {
   );
   const publicKey = stdout.split("\n")[3].split(" ")[1];
   fs.readFile(filePath, "utf8", (err, privateKey) => {
+    process.nextTick(() => {
+      fs.unlink(filePath, (err) => {
+        if (err) console.log(err);
+      });
+    });
     if (err) {
       return res
         .status(500)
