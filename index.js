@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/ping", (_, res) => res.send("ping"));
+app.get("/ping", (_, res) => res.send("pong"));
 
 app.get("/generatePair", (_, res) => {
   const filePath =
