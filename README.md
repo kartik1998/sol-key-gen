@@ -1,6 +1,6 @@
 # Solana Key Generator API
 
-service to generate solana public / private key pairs
+Heroku service to generate solana public / private key pairs
 
 ### Usage
 * <i><b>staging url:</b></i> <i>https://sol-key-gen-staging.herokuapp.com</i>
