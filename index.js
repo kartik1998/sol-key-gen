@@ -13,7 +13,7 @@ app.get("/generatePair", (_, res) => {
   const filePath =
     path.resolve("./creds") + "/" + utils.computeRandomString(40);
   const { stdout } = shell.exec(
-    `/root/.local/share/solana/install/active_release/bin/solana-keygen new --no-bip39-passphrase -o ${filePath}`
+    `solana-keygen new --no-bip39-passphrase -o ${filePath}`
   );
   const publicKey = stdout.split("\n")[3].split(" ")[1];
   fs.readFile(filePath, "utf8", (err, privateKey) => {

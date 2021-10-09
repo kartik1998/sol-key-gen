@@ -6,8 +6,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     curl
 RUN sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
-RUN PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
-RUN /root/.local/share/solana/install/active_release/bin/solana --version
+ENV PATH="/root/.local/share/solana/install/active_release/bin:${PATH}"
+RUN solana --version
 # ----------- sol installtion ----------- #
 
 # ----------- node installtion ----------- #
