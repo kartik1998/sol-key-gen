@@ -1,9 +1,18 @@
-FROM solanalabs/solana:beta
+FROM ubuntu:latest
 
 WORKDIR /app
 
+# ----------- sol installtion ----------- #
+RUN apt-get update && apt-get install -y \
+    curl
+RUN sh -c "$(curl -sSfL https://release.solana.com/v1.8.0/install)"
+RUN PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
+RUN /root/.local/share/solana/install/active_release/bin/solana --version
+# ----------- sol installtion ----------- #
+
 # ----------- node installtion ----------- #
 ENV NODE_VERSION=14.6.0
+RUN apt update
 RUN apt install -y curl
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
