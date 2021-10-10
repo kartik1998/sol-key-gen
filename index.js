@@ -4,8 +4,10 @@ const path = require("path");
 const utils = require("./lib/utils");
 const shell = require("shelljs");
 const fs = require("fs");
+const cors = require('cors')
 
 const PORT = process.env.PORT || 3000;
+app.use(cors());
 
 app.get("/ping", (_, res) => res.send("pong"));
 
